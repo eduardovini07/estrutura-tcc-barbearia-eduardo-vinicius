@@ -1,4 +1,4 @@
-# HealthSched - Sistema de Agendamento Médico
+# BarberiaMax - Sistema de Agendamento de Barbearia
 
 > **Projeto de Conclusão de Curso (TCC)** apresentado ao Curso Técnico em Desenvolvimento de Sistemas como requisito parcial para obtenção do título de Técnico em Desenvolvimento de Sistemas.
 
@@ -16,9 +16,9 @@
 
 ## Sobre o Projeto
 
-O **HealthSched** é uma solução web desenvolvida para otimizar a gestão de consultas e horários em clínicas médicas de pequeno e médio porte. O sistema busca resolver problemas recorrentes na rotina de agendamento, como acúmulo de faltas de pacientes (absenteísmo), falhas na comunicação de confirmação e a ineficiência do agendamento manual via telefone ou planilhas.
+O **BarberiaMax** é uma solução web desenvolvida para otimizar a gestão de horários e serviços em barbearias de pequeno e médio porte. O sistema busca resolver problemas recorrentes na rotina de agendamento, como acúmulo de faltas de clientes (absenteísmo), falhas na comunicação de confirmação e a ineficiência do agendamento manual via telefone, WhatsApp ou planilhas.
 
-Com o objetivo geral de digitalizar e simplificar a relação entre clínica, médicos e pacientes, a plataforma permite a marcação online autônoma de consultas 24/7, a gestão unificada da agenda dos profissionais de saúde e o envio automatizado de lembretes, proporcionando maior eficiência operacional e melhor experiência ao usuário.
+Com o objetivo geral de digitalizar e simplificar a relação entre a barbearia, os barbeiros e os clientes, a plataforma permite a marcação online autônoma de horários 24/7, a gestão unificada da agenda dos profissionais e o envio automatizado de lembretes, proporcionando maior eficiência operacional e melhor experiência ao usuário.
 
 ---
 
@@ -34,12 +34,12 @@ Com o objetivo geral de digitalizar e simplificar a relação entre clínica, m�
 
 ## Funcionalidades Principais
 
-- [x] **Autenticação e Perfis de Acesso:** Acesso diferenciado para Administrador, Recepcionista, Médico e Paciente.
-- [x] **Agendamento Online de Consultas:** Escolha de especialidade médica, profissional, data e horário disponível.
-- [x] **Gestão da Agenda Médica:** Painel para o profissional visualizar consultas diárias, alterar status (atendido, cancelado, em espera) e definir horários de atendimento/folgas.
-- [x] **Confirmação e Lembretes:** Notificações automáticas via e-mail e/ou WhatsApp para confirmação prévia da consulta.
-- [x] **Prontuário/Histórico do Paciente:** Registro simples do histórico de consultas e observações técnicas da consulta.
-- [x] **Módulo de Relatórios e Métricas:** Gráficos de absenteísmo, especialidades mais procuradas e volume de atendimentos mensais.
+- [x] **Autenticação e Perfis de Acesso:** Acesso diferenciado para Administrador, Recepcionista, Barbeiro e Cliente.
+- [x] **Agendamento Online de Serviços:** Escolha de serviço (corte, barba, pigmentação, química, etc.), profissional (barbeiro), data e horário disponível.
+- [x] **Gestão da Agenda do Barbeiro:** Painel para o profissional visualizar os cortes diários, alterar status (concluído, cancelado, na cadeira) e definir horários de atendimento/folgas e pausas para almoço.
+- [x] **Confirmação e Lembretes:** Notificações automáticas via e-mail e/ou WhatsApp para confirmação prévia do agendamento.
+- [x] **Histórico e Preferências do Cliente:** Registro do histórico de serviços realizados e anotações sobre preferências (ex: numeração do pente, estilo de corte).
+- [x] **Módulo de Relatórios e Métricas:** Gráficos de absenteísmo, serviços mais procurados, desempenho por barbeiro e volume de atendimentos mensais.
 
 ---
 
@@ -75,38 +75,22 @@ Antes de começar, certifique-se de ter instalado em sua máquina:
 
 ```bash
 # 1. Clone este repositório
-$ git clone https://github.com/usuario/healthsched.git
+$ git clone [https://github.com/usuario/barberiamax.git](https://github.com/usuario/barberiamax.git)
 
 # 2. Acesse a pasta do projeto
-$ cd healthsched
+$ cd barberiamax
 
 # 3. Instale as dependências do back-end e front-end
 $ npm install
 # ou
-$ cd backend && npm install
-$ cd ../frontend && npm install
+$cd backend && npm install$ cd ../frontend && npm install
 
 # 4. Configure o arquivo de variáveis de ambiente (.env)
 # Crie um arquivo .env na raiz/backend seguindo o exemplo do .env.example
 # Defina as credenciais do banco de dados e chaves de envio de e-mail
 
 # 5. Execute as migrações e popule o banco de dados
-$ npm run db:migrate
-$ npm run db:seed
+$npm run db:migrate$ npm run db:seed
 
 # 6. Inicie a aplicação
 $ npm run dev
-```
-
-O servidor local iniciará na porta `:3000` (Front-end) e `:5000` (Back-end API). 
-Acesse: <http://localhost:3000>
-
----
-
-## Documentação do TCC
-
-Acesse a documentação acadêmica do projeto nos links abaixo:
-
-- [Monografia Completa (PDF)](./docs/monografia_tcc.pdf)
-- [Slides da Apresentação da Banca (PDF)](./docs/slides_apresentacao.pdf)
-- [Manual do Usuário (PDF)](./docs/manual_usuario.pdf)
